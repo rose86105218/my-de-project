@@ -38,7 +38,7 @@ docker network create my_network
 docker compose -f docker-compose-broker.yml up -d
 
 # 停止並移除服務
-
+docker compose -f docker-compose-broker.yml down
 
 ＃ 查看服務 logs
 docker logs -f rabbitmq
