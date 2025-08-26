@@ -75,8 +75,8 @@ uv run celery -A data_ingestion.worker worker --loglevel=info --hostname=worker3
 代表要丟給Celery執行，如：crawler_hahow_course.delay("programing") 
 
 3. worker (接收並執行任務的人)
--在app裡加上module
--注意module會是整個task的py檔，而不是單一task (不然Celery會找不到task位置)，且一個py檔也可能有多個task
+-在app裡加上有含task的py檔
+-注意是含task的py檔，而不是單一task (不然Celery會找不到task位置)，且一個py檔也可能有多個task
 
 app = Celery(
     main="worker",
