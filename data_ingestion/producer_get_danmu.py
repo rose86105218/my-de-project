@@ -1,6 +1,6 @@
 # producer
 # 下載所有video_list內的彈幕
-from data_ingestion.task_get_danmu import get_damnu
+from data_ingestion.task_get_danmu import get_danmu
 
 danmu_list = []
 for video in video_list:
