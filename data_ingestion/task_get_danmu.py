@@ -13,7 +13,7 @@ video_list = json.loads(resp.text)
 
 # 下載彈幕函式 (註冊成task)
 @app.task()
-def get_danmu(video_list):
+def get_danmu(video):
     # 主網頁
     url = "https://api.gamer.com.tw/anime/v1/danmu.php"
     # 影片參數(影片編號，地區等)

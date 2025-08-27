@@ -1,12 +1,14 @@
 # producer
 # 下載所有video_list內的彈幕
-from data_ingestion.task_get_danmu import get_danmu
+from data_ingestion.task_get_danmu import get_danmu, video_list
+import pandas as pd
 
 danmu_list = []
 for video in video_list:
-    danmu_partial = get_danmu.delay(video_list) # delay()代表會由producer提交任務給worker
-    danmu_list = danmu_list + danmu_partial
-    print("season{} episode{}已完成".format(video["season"], video["episode"]))
+    task = get_danmu.delay(video)       # 丟到 Celery Worker
+    danmu_partial = task.get()          # 阻塞等待結果
+    danmu_list.extend(danmu_partial)    # 用 extend 比 list+list 效率好
+    print(f"season{video['season']} episode{video['episode']} 已完成")
 
 
 # 用pandas轉成DataFrame
