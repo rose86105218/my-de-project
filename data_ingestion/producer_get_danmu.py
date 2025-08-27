@@ -5,7 +5,7 @@ import pandas as pd
 
 danmu_list = []
 for video in video_list:
-    task = get_danmu.delay(video)       # 丟到 Celery Worker
+    task = get_danmu.apply_async(args=[video], queue="get_danmu")
     danmu_partial = task.get()          # 阻塞等待結果
     danmu_list.extend(danmu_partial)    # 用 extend 比 list+list 效率好
     print(f"season{video['season']} episode{video['episode']} 已完成")
