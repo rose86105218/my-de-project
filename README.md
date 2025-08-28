@@ -45,21 +45,15 @@ docker logs -f rabbitmq
 docker logs -f flower
 
 # producer 發送任務
-uv run data_ingestion/producer.py
+uv run data_ingestion/producer_get_danmu.py
 
 # 啟動 worker
-uv run celery -A data_ingestion.worker worker --loglevel=info --hostname=worker1%h
-uv run celery -A data_ingestion.worker worker --loglevel=info --hostname=worker2%h
+uv run celery -A data_ingestion.worker worker --loglevel=info --concurrency=4 --hostname=worker1@%h -Q get_danmu 
+uv run celery -A data_ingestion.worker worker --loglevel=info --concurrency=4 --hostname=worker2@%h -Q get_danmu
 
-# 指定 worker concurrency
-uv run celery -A data_ingestion.worker worker --loglevel=info --hostname=worker1%h --concurrency=1
-uv run celery -A data_ingestion.worker worker --loglevel=info --hostname=worker2%h --concurrency=1
-
-
-# 指定 worker queue
-uv run celery -A data_ingestion.worker worker --loglevel=info --hostname=worker1%h -Q hahow_course
-uv run celery -A data_ingestion.worker worker --loglevel=info --hostname=worker2%h -Q hahow_article
-uv run celery -A data_ingestion.worker worker --loglevel=info --hostname=worker3%h -Q hahow_course,hahow_article
+--concurrency=4 → 每個 worker 開 4 個 process
+--hostname=worker1%h → 設定 worker 名稱，%h是主機名，多台主機時可避免worker名字衝突
+-Q get_danmu → 只監控這個 queue
 ```
 
 ## task, producer, worker設定
