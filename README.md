@@ -44,9 +44,6 @@ docker compose -f docker-compose-broker.yml down
 docker logs -f rabbitmq
 docker logs -f flower
 
-# producer 發送任務
-uv run data_ingestion/producer_get_danmu.py
-
 # 啟動 worker
 uv run celery -A data_ingestion.worker worker --loglevel=info --concurrency=4 --hostname=worker1@%h -Q get_danmu 
 uv run celery -A data_ingestion.worker worker --loglevel=info --concurrency=4 --hostname=worker2@%h -Q get_danmu
@@ -54,6 +51,11 @@ uv run celery -A data_ingestion.worker worker --loglevel=info --concurrency=4 --
 --concurrency=4 → 每個 worker 開 4 個 process
 --hostname=worker1%h → 設定 worker 名稱，%h是主機名，多台主機時可避免worker名字衝突
 -Q get_danmu → 只監控這個 queue
+
+# producer 發送任務
+uv run data_ingestion/producer_get_danmu.py
+
+*一般建議先啟動worker，再用producer發送任務
 ```
 
 ## task, producer, worker設定
