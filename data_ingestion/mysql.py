@@ -12,7 +12,7 @@ metadata = MetaData()
 
 
 # 彈幕結構
-article_table = Table(
+danmu_table = Table(
     "danmu",  # 資料表名稱
     metadata,
     Column("uploaded_at", DATETIME, nullable=False, comment="資料更新時間"),
