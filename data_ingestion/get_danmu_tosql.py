@@ -36,13 +36,23 @@ def get_danmu(video):
         # 若清理後的彈幕是空白，就跳過不再處理
         if d["text"] == "":
             continue
-        #非空白的彈幕
-        d["season"] = video["season"]
-        d["episode"] = video["episode"]
-        d["season_episode"] = video["season_episode"]
-        d["title"] = video["title"]
-        del d["color"]
-        del d["position"]
-        del d["size"]
         cleaned_data.append(d)
-    return cleaned_data
+
+
+    df = pd.DataFrame(cleaned_data)
+    # 增減欄位
+    df['uploaded_at'] = datetime.now(timezone.utc)  # 新增 uploaded_at 欄位，設為現在時間
+    df["season"] = video["season"]
+    df["episode"] = video["episode"]
+    df["season_episode"] = video["season_episode"]
+    df["title"] = video["title"]
+
+    df = df.drop(column=["color, position, size"])
+    
+    upload_data_to_mysql(table_name="danmu", df=df)
+    print("danmu has been uploaded to mysql.")
+
+
+
+if __name__ == "__main__":
+    get_danmu(video_list[0])
