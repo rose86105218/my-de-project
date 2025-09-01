@@ -5,7 +5,7 @@ from sqlalchemy.dialects.mysql import insert
 
 from data_ingestion.config import MYSQL_USERNAME, MYSQL_PASSWORD, MYSQL_HOST, MYSQL_PORT
 
-MYSQL_DATABASE = "danmu"
+MYSQL_DATABASE = "AOT"
 
 # 創建元資料
 metadata = MetaData()
@@ -13,7 +13,7 @@ metadata = MetaData()
 
 # 彈幕結構
 article_table = Table(
-    "AOT_danmu",  # 資料表名稱
+    "danmu",  # 資料表名稱
     metadata,
     Column("uploaded_at", DATETIME, nullable=False, comment="資料更新時間"),
     Column("sn", Integer, primary_key=True, comment="彈幕sn"),
