@@ -58,7 +58,11 @@ def get_danmu(video):
     #先轉成dict
     data = df.to_dict(orient='records')
     upload_data_to_mysql_upsert(table_obj=danmu_table, data=data)
-    print("danmu has been uploaded to mysql.")
+    print(f'第{video["season"]}季,第{video["season_episode"]}集，彈幕已上傳到MySQL')
 
 if __name__ == "__main__":
-    get_danmu(video_list[0])
+    for video in video_list:
+        get_danmu(video)
+
+# if __name__ == "__main__":
+    # get_danmu(video_list[80])
