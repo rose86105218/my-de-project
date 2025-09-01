@@ -4,6 +4,8 @@ import pandas as pd
 import re
 from datetime import datetime, timezone, timedelta
 import time
+from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_upsert, danmu_table
+
 
 
 # 匯入video_list
@@ -50,7 +52,11 @@ def get_danmu(video):
 
     df = df.drop(["color", "position", "size"], axis=1)
 
-    upload_data_to_mysql(table_name="danmu", df=df)
+    #upload_data_to_mysql(table_name="danmu", df=df)
+
+    #先轉成dict
+    data = df.to_dict(orient='records')
+    upload_data_to_mysql_upsert(table_obj=danmu_table, data=data)
     print("danmu has been uploaded to mysql.")
 
 if __name__ == "__main__":
