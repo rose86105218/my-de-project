@@ -12,11 +12,11 @@ services:
       - TZ=Asia/Taipei  # 設定時區為台北（UTC+8）
       - RABBITMQ_HOST=rabbitmq
     networks:
-      - my_network  # 將此服務連接到 my_network 網路
+      - my_network_danmu  # 將此服務連接到 my_network 網路
     volumes:
       - ./output:/app/output
 
 networks:
-  my_network:  # 定義一個名為 my_network 的自訂網路，其他服務也可加入此網路
+  my_network_danmu:  # 定義一個名為 my_network 的自訂網路，其他服務也可加入此網路
     # 加入已經存在的網路
     external: true

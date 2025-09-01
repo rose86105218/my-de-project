@@ -50,6 +50,7 @@ def get_danmu(video):
     df["season_episode"] = video["season_episode"]
     df["title"] = video["title"]
 
+
     df = df.drop(["color", "position", "size"], axis=1)
 
     #upload_data_to_mysql(table_name="danmu", df=df)

@@ -12,7 +12,7 @@ services: # 定義所有要啟動的服務
       RABBITMQ_DEFAULT_USER: "worker" # 設定預設登入使用者名稱
       RABBITMQ_DEFAULT_PASS: "worker" # 設定預設登入使用者密碼
     networks:
-      - my_network # 將此服務加入名為 my_network 的自訂網路，方便與其他服務溝通
+      - my_network_danmu # 將此服務加入名為 my_network 的自訂網路，方便與其他服務溝通
 
   flower: # Flower 服務，用於監控 Celery 任務狀態
     image: mher/flower:latest # 使用最新版本的 Flower 映像檔
@@ -29,10 +29,10 @@ services: # 定義所有要啟動的服務
         "--port=5555"
       ] # 啟動 Flower 並指定 RabbitMQ 為 broker
     networks:
-      - my_network # 將此服務加入 my_network 網路，方便與 rabbitmq 溝通
+      - my_network_danmu # 將此服務加入 my_network 網路，方便與 rabbitmq 溝通
 
 
 networks:
-  my_network: # 定義一個名為 my_network 的自訂網路，讓服務間可以互相連線
+  my_network_danmu: # 定義一個名為 my_network 的自訂網路，讓服務間可以互相連線
     # 加入已經存在的網路
     external: true

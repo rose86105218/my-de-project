@@ -18,7 +18,7 @@ danmu_table = Table(
     Column("uploaded_at", DATETIME, nullable=False, comment="資料更新時間"),
     Column("sn", Integer, primary_key=True, comment="彈幕sn"),
     Column("text", String(150), nullable=True, comment="彈幕"),
-    Column("uesrid", String(50), nullable=True, comment="留言者"),
+    Column("userid", String(50), nullable=True, comment="留言者"),
     Column("season", Integer, nullable=True, comment="季"),
     Column("episode", Integer, nullable=True, comment="集"),
     Column("season_episode", Integer, nullable=True, comment="季/集"),
