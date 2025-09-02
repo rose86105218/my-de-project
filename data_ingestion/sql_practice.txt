@@ -1,0 +1,6 @@
+# 確認upsert是否成功 (確認相同sn會不會出現多次)
+select sn, uploaded_at, COUNT(sn) as appear_time
+from danmu
+group by sn
+having appear_time >1
+order by appear_time desc;
