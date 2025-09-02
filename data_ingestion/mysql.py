@@ -17,13 +17,13 @@ danmu_table = Table(
     metadata,
     Column("uploaded_at", DATETIME, nullable=False, comment="資料更新時間"),
     Column("sn", Integer, primary_key=True, comment="彈幕sn"),
-    Column("text", String(150), nullable=True, comment="彈幕"),
+    Column("text", String(150), nullable=False, comment="彈幕"),
     Column("userid", String(50), nullable=True, comment="留言者"),
-    Column("season", Integer, nullable=True, comment="季"),
-    Column("episode", Integer, nullable=True, comment="集"),
-    Column("season_episode", Integer, nullable=True, comment="季/集"),
-    Column("title", String(100), nullable=True, comment="標題"),
-    Column("time", Integer, nullable=True, comment="彈幕所在影片時間"),
+    Column("season", Integer, nullable=False, comment="季"),
+    Column("episode", Integer, nullable=False, comment="集"),
+    Column("season_episode", Integer, nullable=False, comment="季/集"),
+    Column("title", String(100), nullable=False, comment="標題"),
+    Column("time", Integer, nullable=False, comment="彈幕所在影片時間"),
 )
 
 
