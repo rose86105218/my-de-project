@@ -1,0 +1,91 @@
+[2025-09-10T22:37:09.477+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=100) to work on /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:37:09.478+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/example_dummy_tasks_dag.py for tasks to queue
+[2025-09-10T22:37:09.482+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:37:09.481+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:37:09.523+0800] INFO - processor.py:925 - process_file() - DAG(s) 'example_dummy_tasks_dag' retrieved from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:37:09.577+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:37:09.576+0800] INFO - dag.py:3239 - bulk_write_to_db() - Sync 1 DAGs
+[2025-09-10T22:37:09.629+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:37:09.629+0800] INFO - dag.py:4180 - calculate_dagrun_date_fields() - Setting next_dagrun for example_dummy_tasks_dag to 2025-09-08 18:00:00+00:00, run_after=2025-09-09 18:00:00+00:00
+[2025-09-10T22:37:09.667+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/example_dummy_tasks_dag.py took 0.205 seconds
+[2025-09-10T22:37:40.107+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=180) to work on /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:37:40.108+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/example_dummy_tasks_dag.py for tasks to queue
+[2025-09-10T22:37:40.112+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:37:40.111+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:37:40.132+0800] INFO - processor.py:925 - process_file() - DAG(s) 'example_dummy_tasks_dag' retrieved from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:37:40.166+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:37:40.165+0800] INFO - dag.py:3239 - bulk_write_to_db() - Sync 1 DAGs
+[2025-09-10T22:37:40.196+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:37:40.195+0800] INFO - dag.py:4180 - calculate_dagrun_date_fields() - Setting next_dagrun for example_dummy_tasks_dag to 2025-09-08 18:00:00+00:00, run_after=2025-09-09 18:00:00+00:00
+[2025-09-10T22:37:40.360+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/example_dummy_tasks_dag.py took 0.261 seconds
+[2025-09-10T22:38:11.342+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=262) to work on /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:38:11.343+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/example_dummy_tasks_dag.py for tasks to queue
+[2025-09-10T22:38:11.345+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:38:11.344+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:38:11.357+0800] INFO - processor.py:925 - process_file() - DAG(s) 'example_dummy_tasks_dag' retrieved from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:38:11.379+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:38:11.378+0800] INFO - dag.py:3239 - bulk_write_to_db() - Sync 1 DAGs
+[2025-09-10T22:38:11.494+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:38:11.494+0800] INFO - dag.py:4180 - calculate_dagrun_date_fields() - Setting next_dagrun for example_dummy_tasks_dag to 2025-09-08 18:00:00+00:00, run_after=2025-09-09 18:00:00+00:00
+[2025-09-10T22:38:11.508+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/example_dummy_tasks_dag.py took 0.172 seconds
+[2025-09-10T22:38:42.340+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=336) to work on /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:38:42.341+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/example_dummy_tasks_dag.py for tasks to queue
+[2025-09-10T22:38:42.342+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:38:42.342+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:38:42.359+0800] INFO - processor.py:925 - process_file() - DAG(s) 'example_dummy_tasks_dag' retrieved from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:38:42.386+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:38:42.386+0800] INFO - dag.py:3239 - bulk_write_to_db() - Sync 1 DAGs
+[2025-09-10T22:38:42.508+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:38:42.508+0800] INFO - dag.py:4180 - calculate_dagrun_date_fields() - Setting next_dagrun for example_dummy_tasks_dag to 2025-09-08 18:00:00+00:00, run_after=2025-09-09 18:00:00+00:00
+[2025-09-10T22:38:42.536+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/example_dummy_tasks_dag.py took 0.204 seconds
+[2025-09-10T22:39:13.260+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=420) to work on /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:39:13.261+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/example_dummy_tasks_dag.py for tasks to queue
+[2025-09-10T22:39:13.263+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:39:13.262+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:39:13.386+0800] INFO - processor.py:925 - process_file() - DAG(s) 'example_dummy_tasks_dag' retrieved from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:39:13.409+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:39:13.408+0800] INFO - dag.py:3239 - bulk_write_to_db() - Sync 1 DAGs
+[2025-09-10T22:39:13.426+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:39:13.426+0800] INFO - dag.py:4180 - calculate_dagrun_date_fields() - Setting next_dagrun for example_dummy_tasks_dag to 2025-09-08 18:00:00+00:00, run_after=2025-09-09 18:00:00+00:00
+[2025-09-10T22:39:13.442+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/example_dummy_tasks_dag.py took 0.189 seconds
+[2025-09-10T22:39:44.194+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=494) to work on /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:39:44.196+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/example_dummy_tasks_dag.py for tasks to queue
+[2025-09-10T22:39:44.197+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:39:44.196+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:39:44.211+0800] INFO - processor.py:925 - process_file() - DAG(s) 'example_dummy_tasks_dag' retrieved from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:39:44.232+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:39:44.231+0800] INFO - dag.py:3239 - bulk_write_to_db() - Sync 1 DAGs
+[2025-09-10T22:39:44.251+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:39:44.250+0800] INFO - dag.py:4180 - calculate_dagrun_date_fields() - Setting next_dagrun for example_dummy_tasks_dag to 2025-09-08 18:00:00+00:00, run_after=2025-09-09 18:00:00+00:00
+[2025-09-10T22:39:44.269+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/example_dummy_tasks_dag.py took 0.080 seconds
+[2025-09-10T22:40:14.461+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=568) to work on /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:40:14.462+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/example_dummy_tasks_dag.py for tasks to queue
+[2025-09-10T22:40:14.463+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:40:14.463+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:40:14.476+0800] INFO - processor.py:925 - process_file() - DAG(s) 'example_dummy_tasks_dag' retrieved from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:40:14.498+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:40:14.498+0800] INFO - dag.py:3239 - bulk_write_to_db() - Sync 1 DAGs
+[2025-09-10T22:40:14.517+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:40:14.516+0800] INFO - dag.py:4180 - calculate_dagrun_date_fields() - Setting next_dagrun for example_dummy_tasks_dag to 2025-09-08 18:00:00+00:00, run_after=2025-09-09 18:00:00+00:00
+[2025-09-10T22:40:14.532+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/example_dummy_tasks_dag.py took 0.077 seconds
+[2025-09-10T22:40:44.780+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=642) to work on /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:40:44.781+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/example_dummy_tasks_dag.py for tasks to queue
+[2025-09-10T22:40:44.783+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:40:44.783+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:40:44.796+0800] INFO - processor.py:925 - process_file() - DAG(s) 'example_dummy_tasks_dag' retrieved from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:40:44.818+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:40:44.817+0800] INFO - dag.py:3239 - bulk_write_to_db() - Sync 1 DAGs
+[2025-09-10T22:40:44.836+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:40:44.836+0800] INFO - dag.py:4180 - calculate_dagrun_date_fields() - Setting next_dagrun for example_dummy_tasks_dag to 2025-09-08 18:00:00+00:00, run_after=2025-09-09 18:00:00+00:00
+[2025-09-10T22:40:44.852+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/example_dummy_tasks_dag.py took 0.078 seconds
+[2025-09-10T22:41:15.140+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=716) to work on /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:41:15.141+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/example_dummy_tasks_dag.py for tasks to queue
+[2025-09-10T22:41:15.143+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:41:15.143+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:41:15.158+0800] INFO - processor.py:925 - process_file() - DAG(s) 'example_dummy_tasks_dag' retrieved from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:41:15.181+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:41:15.181+0800] INFO - dag.py:3239 - bulk_write_to_db() - Sync 1 DAGs
+[2025-09-10T22:41:15.202+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:41:15.202+0800] INFO - dag.py:4180 - calculate_dagrun_date_fields() - Setting next_dagrun for example_dummy_tasks_dag to 2025-09-08 18:00:00+00:00, run_after=2025-09-09 18:00:00+00:00
+[2025-09-10T22:41:15.220+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/example_dummy_tasks_dag.py took 0.086 seconds
+[2025-09-10T22:41:45.469+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=790) to work on /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:41:45.470+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/example_dummy_tasks_dag.py for tasks to queue
+[2025-09-10T22:41:45.472+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:41:45.472+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:41:45.486+0800] INFO - processor.py:925 - process_file() - DAG(s) 'example_dummy_tasks_dag' retrieved from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:41:45.508+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:41:45.508+0800] INFO - dag.py:3239 - bulk_write_to_db() - Sync 1 DAGs
+[2025-09-10T22:41:45.526+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:41:45.526+0800] INFO - dag.py:4180 - calculate_dagrun_date_fields() - Setting next_dagrun for example_dummy_tasks_dag to 2025-09-08 18:00:00+00:00, run_after=2025-09-09 18:00:00+00:00
+[2025-09-10T22:41:45.543+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/example_dummy_tasks_dag.py took 0.080 seconds
+[2025-09-10T22:42:15.912+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=864) to work on /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:42:15.914+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/example_dummy_tasks_dag.py for tasks to queue
+[2025-09-10T22:42:15.915+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:42:15.914+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:42:15.928+0800] INFO - processor.py:925 - process_file() - DAG(s) 'example_dummy_tasks_dag' retrieved from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:42:15.949+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:42:15.949+0800] INFO - dag.py:3239 - bulk_write_to_db() - Sync 1 DAGs
+[2025-09-10T22:42:15.972+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:42:15.972+0800] INFO - dag.py:4180 - calculate_dagrun_date_fields() - Setting next_dagrun for example_dummy_tasks_dag to 2025-09-08 18:00:00+00:00, run_after=2025-09-09 18:00:00+00:00
+[2025-09-10T22:42:15.989+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/example_dummy_tasks_dag.py took 0.083 seconds
+[2025-09-10T22:42:46.320+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=938) to work on /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:42:46.321+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/example_dummy_tasks_dag.py for tasks to queue
+[2025-09-10T22:42:46.322+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:42:46.322+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:42:46.335+0800] INFO - processor.py:925 - process_file() - DAG(s) 'example_dummy_tasks_dag' retrieved from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:42:46.356+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:42:46.356+0800] INFO - dag.py:3239 - bulk_write_to_db() - Sync 1 DAGs
+[2025-09-10T22:42:46.375+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:42:46.375+0800] INFO - dag.py:4180 - calculate_dagrun_date_fields() - Setting next_dagrun for example_dummy_tasks_dag to 2025-09-08 18:00:00+00:00, run_after=2025-09-09 18:00:00+00:00
+[2025-09-10T22:42:46.390+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/example_dummy_tasks_dag.py took 0.076 seconds
+[2025-09-10T22:43:16.609+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=1012) to work on /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:43:16.610+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/example_dummy_tasks_dag.py for tasks to queue
+[2025-09-10T22:43:16.612+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:43:16.611+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:43:16.625+0800] INFO - processor.py:925 - process_file() - DAG(s) 'example_dummy_tasks_dag' retrieved from /opt/airflow/dags/example_dummy_tasks_dag.py
+[2025-09-10T22:43:16.647+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:43:16.647+0800] INFO - dag.py:3239 - bulk_write_to_db() - Sync 1 DAGs
+[2025-09-10T22:43:16.666+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:43:16.666+0800] INFO - dag.py:4180 - calculate_dagrun_date_fields() - Setting next_dagrun for example_dummy_tasks_dag to 2025-09-08 18:00:00+00:00, run_after=2025-09-09 18:00:00+00:00
+[2025-09-10T22:43:16.681+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/example_dummy_tasks_dag.py took 0.078 seconds

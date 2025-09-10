@@ -1,0 +1,228 @@
+[2025-09-10T22:37:11.584+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=159) to work on /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:37:11.585+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/hahow_crawler_producer_dag.py for tasks to queue
+[2025-09-10T22:37:11.596+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:37:11.595+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:37:12.225+0800] INFO - logging_mixin.py:190 - _propagate_log() - CPU 核心數: 12
+[2025-09-10T22:37:13.000+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:37:12.998+0800] ERROR - dagbag.py:387 - parse() - Failed to import: /opt/airflow/dags/hahow_crawler_producer_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hahow_crawler_producer_dag.py", line 12, in <module>
+    from data_ingestion.tasks_crawler_hahow import crawler_hahow_article, crawler_hahow_course
+  File "/opt/airflow/data_ingestion/tasks_crawler_hahow.py", line 6, in <module>
+    from data_ingestion.hahow_crawler_course_optimized_sales import crawler_hahow_course as _crawler_hahow_course
+  File "/opt/airflow/data_ingestion/hahow_crawler_course_optimized_sales.py", line 8, in <module>
+    from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_insert, upload_data_to_mysql_upsert, course_table, course_sales_table
+ImportError: cannot import name 'upload_data_to_mysql_insert' from 'data_ingestion.mysql' (/opt/airflow/data_ingestion/mysql.py)
+[2025-09-10T22:37:13.001+0800] WARNING - processor.py:927 - process_file() - No viable dags retrieved from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:37:13.026+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/hahow_crawler_producer_dag.py took 1.453 seconds
+[2025-09-10T22:37:43.514+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=235) to work on /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:37:43.516+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/hahow_crawler_producer_dag.py for tasks to queue
+[2025-09-10T22:37:43.519+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:37:43.519+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:37:43.674+0800] INFO - logging_mixin.py:190 - _propagate_log() - CPU 核心數: 12
+[2025-09-10T22:37:44.073+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:37:44.072+0800] ERROR - dagbag.py:387 - parse() - Failed to import: /opt/airflow/dags/hahow_crawler_producer_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hahow_crawler_producer_dag.py", line 12, in <module>
+    from data_ingestion.tasks_crawler_hahow import crawler_hahow_article, crawler_hahow_course
+  File "/opt/airflow/data_ingestion/tasks_crawler_hahow.py", line 6, in <module>
+    from data_ingestion.hahow_crawler_course_optimized_sales import crawler_hahow_course as _crawler_hahow_course
+  File "/opt/airflow/data_ingestion/hahow_crawler_course_optimized_sales.py", line 8, in <module>
+    from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_insert, upload_data_to_mysql_upsert, course_table, course_sales_table
+ImportError: cannot import name 'upload_data_to_mysql_insert' from 'data_ingestion.mysql' (/opt/airflow/data_ingestion/mysql.py)
+[2025-09-10T22:37:44.073+0800] WARNING - processor.py:927 - process_file() - No viable dags retrieved from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:37:44.090+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/hahow_crawler_producer_dag.py took 0.581 seconds
+[2025-09-10T22:38:14.233+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=306) to work on /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:38:14.235+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/hahow_crawler_producer_dag.py for tasks to queue
+[2025-09-10T22:38:14.237+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:38:14.236+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:38:14.402+0800] INFO - logging_mixin.py:190 - _propagate_log() - CPU 核心數: 12
+[2025-09-10T22:38:14.764+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:38:14.764+0800] ERROR - dagbag.py:387 - parse() - Failed to import: /opt/airflow/dags/hahow_crawler_producer_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hahow_crawler_producer_dag.py", line 12, in <module>
+    from data_ingestion.tasks_crawler_hahow import crawler_hahow_article, crawler_hahow_course
+  File "/opt/airflow/data_ingestion/tasks_crawler_hahow.py", line 6, in <module>
+    from data_ingestion.hahow_crawler_course_optimized_sales import crawler_hahow_course as _crawler_hahow_course
+  File "/opt/airflow/data_ingestion/hahow_crawler_course_optimized_sales.py", line 8, in <module>
+    from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_insert, upload_data_to_mysql_upsert, course_table, course_sales_table
+ImportError: cannot import name 'upload_data_to_mysql_insert' from 'data_ingestion.mysql' (/opt/airflow/data_ingestion/mysql.py)
+[2025-09-10T22:38:14.765+0800] WARNING - processor.py:927 - process_file() - No viable dags retrieved from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:38:14.780+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/hahow_crawler_producer_dag.py took 0.553 seconds
+[2025-09-10T22:38:45.044+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=369) to work on /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:38:45.048+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/hahow_crawler_producer_dag.py for tasks to queue
+[2025-09-10T22:38:45.049+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:38:45.049+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:38:45.301+0800] INFO - logging_mixin.py:190 - _propagate_log() - CPU 核心數: 12
+[2025-09-10T22:38:45.757+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:38:45.755+0800] ERROR - dagbag.py:387 - parse() - Failed to import: /opt/airflow/dags/hahow_crawler_producer_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hahow_crawler_producer_dag.py", line 12, in <module>
+    from data_ingestion.tasks_crawler_hahow import crawler_hahow_article, crawler_hahow_course
+  File "/opt/airflow/data_ingestion/tasks_crawler_hahow.py", line 6, in <module>
+    from data_ingestion.hahow_crawler_course_optimized_sales import crawler_hahow_course as _crawler_hahow_course
+  File "/opt/airflow/data_ingestion/hahow_crawler_course_optimized_sales.py", line 8, in <module>
+    from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_insert, upload_data_to_mysql_upsert, course_table, course_sales_table
+ImportError: cannot import name 'upload_data_to_mysql_insert' from 'data_ingestion.mysql' (/opt/airflow/data_ingestion/mysql.py)
+[2025-09-10T22:38:45.757+0800] WARNING - processor.py:927 - process_file() - No viable dags retrieved from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:38:45.782+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/hahow_crawler_producer_dag.py took 0.749 seconds
+[2025-09-10T22:39:15.880+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=443) to work on /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:39:15.881+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/hahow_crawler_producer_dag.py for tasks to queue
+[2025-09-10T22:39:15.882+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:39:15.882+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:39:16.107+0800] INFO - logging_mixin.py:190 - _propagate_log() - CPU 核心數: 12
+[2025-09-10T22:39:16.573+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:39:16.572+0800] ERROR - dagbag.py:387 - parse() - Failed to import: /opt/airflow/dags/hahow_crawler_producer_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hahow_crawler_producer_dag.py", line 12, in <module>
+    from data_ingestion.tasks_crawler_hahow import crawler_hahow_article, crawler_hahow_course
+  File "/opt/airflow/data_ingestion/tasks_crawler_hahow.py", line 6, in <module>
+    from data_ingestion.hahow_crawler_course_optimized_sales import crawler_hahow_course as _crawler_hahow_course
+  File "/opt/airflow/data_ingestion/hahow_crawler_course_optimized_sales.py", line 8, in <module>
+    from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_insert, upload_data_to_mysql_upsert, course_table, course_sales_table
+ImportError: cannot import name 'upload_data_to_mysql_insert' from 'data_ingestion.mysql' (/opt/airflow/data_ingestion/mysql.py)
+[2025-09-10T22:39:16.573+0800] WARNING - processor.py:927 - process_file() - No viable dags retrieved from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:39:16.589+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/hahow_crawler_producer_dag.py took 0.715 seconds
+[2025-09-10T22:39:47.491+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=517) to work on /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:39:47.494+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/hahow_crawler_producer_dag.py for tasks to queue
+[2025-09-10T22:39:47.496+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:39:47.495+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:39:47.608+0800] INFO - logging_mixin.py:190 - _propagate_log() - CPU 核心數: 12
+[2025-09-10T22:39:48.047+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:39:48.045+0800] ERROR - dagbag.py:387 - parse() - Failed to import: /opt/airflow/dags/hahow_crawler_producer_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hahow_crawler_producer_dag.py", line 12, in <module>
+    from data_ingestion.tasks_crawler_hahow import crawler_hahow_article, crawler_hahow_course
+  File "/opt/airflow/data_ingestion/tasks_crawler_hahow.py", line 6, in <module>
+    from data_ingestion.hahow_crawler_course_optimized_sales import crawler_hahow_course as _crawler_hahow_course
+  File "/opt/airflow/data_ingestion/hahow_crawler_course_optimized_sales.py", line 8, in <module>
+    from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_insert, upload_data_to_mysql_upsert, course_table, course_sales_table
+ImportError: cannot import name 'upload_data_to_mysql_insert' from 'data_ingestion.mysql' (/opt/airflow/data_ingestion/mysql.py)
+[2025-09-10T22:39:48.048+0800] WARNING - processor.py:927 - process_file() - No viable dags retrieved from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:39:48.070+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/hahow_crawler_producer_dag.py took 0.588 seconds
+[2025-09-10T22:40:18.758+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=591) to work on /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:40:18.759+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/hahow_crawler_producer_dag.py for tasks to queue
+[2025-09-10T22:40:18.760+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:40:18.760+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:40:18.865+0800] INFO - logging_mixin.py:190 - _propagate_log() - CPU 核心數: 12
+[2025-09-10T22:40:19.299+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:40:19.298+0800] ERROR - dagbag.py:387 - parse() - Failed to import: /opt/airflow/dags/hahow_crawler_producer_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hahow_crawler_producer_dag.py", line 12, in <module>
+    from data_ingestion.tasks_crawler_hahow import crawler_hahow_article, crawler_hahow_course
+  File "/opt/airflow/data_ingestion/tasks_crawler_hahow.py", line 6, in <module>
+    from data_ingestion.hahow_crawler_course_optimized_sales import crawler_hahow_course as _crawler_hahow_course
+  File "/opt/airflow/data_ingestion/hahow_crawler_course_optimized_sales.py", line 8, in <module>
+    from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_insert, upload_data_to_mysql_upsert, course_table, course_sales_table
+ImportError: cannot import name 'upload_data_to_mysql_insert' from 'data_ingestion.mysql' (/opt/airflow/data_ingestion/mysql.py)
+[2025-09-10T22:40:19.300+0800] WARNING - processor.py:927 - process_file() - No viable dags retrieved from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:40:19.315+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/hahow_crawler_producer_dag.py took 0.563 seconds
+[2025-09-10T22:40:50.102+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=665) to work on /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:40:50.104+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/hahow_crawler_producer_dag.py for tasks to queue
+[2025-09-10T22:40:50.105+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:40:50.105+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:40:50.203+0800] INFO - logging_mixin.py:190 - _propagate_log() - CPU 核心數: 12
+[2025-09-10T22:40:50.601+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:40:50.599+0800] ERROR - dagbag.py:387 - parse() - Failed to import: /opt/airflow/dags/hahow_crawler_producer_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hahow_crawler_producer_dag.py", line 12, in <module>
+    from data_ingestion.tasks_crawler_hahow import crawler_hahow_article, crawler_hahow_course
+  File "/opt/airflow/data_ingestion/tasks_crawler_hahow.py", line 6, in <module>
+    from data_ingestion.hahow_crawler_course_optimized_sales import crawler_hahow_course as _crawler_hahow_course
+  File "/opt/airflow/data_ingestion/hahow_crawler_course_optimized_sales.py", line 8, in <module>
+    from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_insert, upload_data_to_mysql_upsert, course_table, course_sales_table
+ImportError: cannot import name 'upload_data_to_mysql_insert' from 'data_ingestion.mysql' (/opt/airflow/data_ingestion/mysql.py)
+[2025-09-10T22:40:50.601+0800] WARNING - processor.py:927 - process_file() - No viable dags retrieved from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:40:50.618+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/hahow_crawler_producer_dag.py took 0.523 seconds
+[2025-09-10T22:41:21.513+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=739) to work on /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:41:21.515+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/hahow_crawler_producer_dag.py for tasks to queue
+[2025-09-10T22:41:21.516+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:41:21.516+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:41:21.610+0800] INFO - logging_mixin.py:190 - _propagate_log() - CPU 核心數: 12
+[2025-09-10T22:41:21.993+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:41:21.991+0800] ERROR - dagbag.py:387 - parse() - Failed to import: /opt/airflow/dags/hahow_crawler_producer_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hahow_crawler_producer_dag.py", line 12, in <module>
+    from data_ingestion.tasks_crawler_hahow import crawler_hahow_article, crawler_hahow_course
+  File "/opt/airflow/data_ingestion/tasks_crawler_hahow.py", line 6, in <module>
+    from data_ingestion.hahow_crawler_course_optimized_sales import crawler_hahow_course as _crawler_hahow_course
+  File "/opt/airflow/data_ingestion/hahow_crawler_course_optimized_sales.py", line 8, in <module>
+    from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_insert, upload_data_to_mysql_upsert, course_table, course_sales_table
+ImportError: cannot import name 'upload_data_to_mysql_insert' from 'data_ingestion.mysql' (/opt/airflow/data_ingestion/mysql.py)
+[2025-09-10T22:41:21.994+0800] WARNING - processor.py:927 - process_file() - No viable dags retrieved from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:41:22.013+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/hahow_crawler_producer_dag.py took 0.508 seconds
+[2025-09-10T22:41:52.805+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=813) to work on /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:41:52.807+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/hahow_crawler_producer_dag.py for tasks to queue
+[2025-09-10T22:41:52.809+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:41:52.808+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:41:52.909+0800] INFO - logging_mixin.py:190 - _propagate_log() - CPU 核心數: 12
+[2025-09-10T22:41:53.399+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:41:53.398+0800] ERROR - dagbag.py:387 - parse() - Failed to import: /opt/airflow/dags/hahow_crawler_producer_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hahow_crawler_producer_dag.py", line 12, in <module>
+    from data_ingestion.tasks_crawler_hahow import crawler_hahow_article, crawler_hahow_course
+  File "/opt/airflow/data_ingestion/tasks_crawler_hahow.py", line 6, in <module>
+    from data_ingestion.hahow_crawler_course_optimized_sales import crawler_hahow_course as _crawler_hahow_course
+  File "/opt/airflow/data_ingestion/hahow_crawler_course_optimized_sales.py", line 8, in <module>
+    from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_insert, upload_data_to_mysql_upsert, course_table, course_sales_table
+ImportError: cannot import name 'upload_data_to_mysql_insert' from 'data_ingestion.mysql' (/opt/airflow/data_ingestion/mysql.py)
+[2025-09-10T22:41:53.400+0800] WARNING - processor.py:927 - process_file() - No viable dags retrieved from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:41:53.423+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/hahow_crawler_producer_dag.py took 0.625 seconds
+[2025-09-10T22:42:24.260+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=887) to work on /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:42:24.262+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/hahow_crawler_producer_dag.py for tasks to queue
+[2025-09-10T22:42:24.264+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:42:24.263+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:42:24.394+0800] INFO - logging_mixin.py:190 - _propagate_log() - CPU 核心數: 12
+[2025-09-10T22:42:24.838+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:42:24.836+0800] ERROR - dagbag.py:387 - parse() - Failed to import: /opt/airflow/dags/hahow_crawler_producer_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hahow_crawler_producer_dag.py", line 12, in <module>
+    from data_ingestion.tasks_crawler_hahow import crawler_hahow_article, crawler_hahow_course
+  File "/opt/airflow/data_ingestion/tasks_crawler_hahow.py", line 6, in <module>
+    from data_ingestion.hahow_crawler_course_optimized_sales import crawler_hahow_course as _crawler_hahow_course
+  File "/opt/airflow/data_ingestion/hahow_crawler_course_optimized_sales.py", line 8, in <module>
+    from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_insert, upload_data_to_mysql_upsert, course_table, course_sales_table
+ImportError: cannot import name 'upload_data_to_mysql_insert' from 'data_ingestion.mysql' (/opt/airflow/data_ingestion/mysql.py)
+[2025-09-10T22:42:24.839+0800] WARNING - processor.py:927 - process_file() - No viable dags retrieved from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:42:24.863+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/hahow_crawler_producer_dag.py took 0.610 seconds
+[2025-09-10T22:42:55.649+0800] INFO - processor.py:186 - _handle_dag_file_processing() - Started process (PID=961) to work on /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:42:55.651+0800] INFO - processor.py:914 - process_file() - Processing file /opt/airflow/dags/hahow_crawler_producer_dag.py for tasks to queue
+[2025-09-10T22:42:55.653+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:42:55.652+0800] INFO - dagbag.py:588 - collect_dags() - Filling up the DagBag from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:42:55.755+0800] INFO - logging_mixin.py:190 - _propagate_log() - CPU 核心數: 12
+[2025-09-10T22:42:56.181+0800] INFO - logging_mixin.py:190 - _propagate_log() - [2025-09-10T22:42:56.180+0800] ERROR - dagbag.py:387 - parse() - Failed to import: /opt/airflow/dags/hahow_crawler_producer_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hahow_crawler_producer_dag.py", line 12, in <module>
+    from data_ingestion.tasks_crawler_hahow import crawler_hahow_article, crawler_hahow_course
+  File "/opt/airflow/data_ingestion/tasks_crawler_hahow.py", line 6, in <module>
+    from data_ingestion.hahow_crawler_course_optimized_sales import crawler_hahow_course as _crawler_hahow_course
+  File "/opt/airflow/data_ingestion/hahow_crawler_course_optimized_sales.py", line 8, in <module>
+    from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_insert, upload_data_to_mysql_upsert, course_table, course_sales_table
+ImportError: cannot import name 'upload_data_to_mysql_insert' from 'data_ingestion.mysql' (/opt/airflow/data_ingestion/mysql.py)
+[2025-09-10T22:42:56.181+0800] WARNING - processor.py:927 - process_file() - No viable dags retrieved from /opt/airflow/dags/hahow_crawler_producer_dag.py
+[2025-09-10T22:42:56.197+0800] INFO - processor.py:208 - _run_file_processor() - Processing /opt/airflow/dags/hahow_crawler_producer_dag.py took 0.560 seconds
