@@ -1,13 +1,15 @@
+import requests
 import math
 import time
-
+import numpy as np
 import pandas as pd
-import requests
+from datetime import datetime, timezone
 
-from data_ingestion.worker import app
+from data_ingestion.mysql import upload_data_to_mysql, upload_data_to_mysql_upsert, article_table
+from data_ingestion.hahow_crawler_common import flatten_tag_names, to_datetime
 
-@app.task()
-def crawler_hahow_article(category: str, **kwargs):
+
+def crawler_hahow_article(category: str):
 
     # 取得總頁數
     url = f'https://api.hahow.in/api/products/search?category=ARTICLE&groups={category}'
@@ -26,7 +28,7 @@ def crawler_hahow_article(category: str, **kwargs):
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36"
         }
         response = requests.get(url, headers=headers)
-        print(f"article, category: {category}, page:{p}, status_code:{response.status_code}")
+        print(f"category: {category}, page:{p}, status_code:{response.status_code}")
         if response.status_code == 200:
             articles = response.json()['data']['articleData']['products']
             for article in articles:
@@ -38,15 +40,15 @@ def crawler_hahow_article(category: str, **kwargs):
                 subgroup_title = article.get('group', {}).get('subGroup', {}).get('title')
                 subgroup_uniquename = article.get('group', {}).get('subGroup', {}).get('uniquename')
                 link = 'https://hahow.in/contents/articles/' + str(article.get('_id'))
-                tags = article.get('productTags')
+                tags = flatten_tag_names(article.get('productTags'))
                 creator_name = article.get('creator', {}).get('name')
                 view_count = article.get('viewCount')
                 clap_total = article.get('clapTotal')
                 preview_description = article.get('previewDescription')
                 cover_image = article.get('coverImage', {}).get('url')
-                created_at = article.get('createdAt')
-                updated_at = article.get('updatedAt')
-                publish_at = article.get('publishedAt')
+                created_at = to_datetime(article.get('createdAt'))
+                updated_at = to_datetime(article.get('updatedAt'))
+                publish_at = to_datetime(article.get('publishedAt'))
 
                 article_dict = {
                     "id": id,
@@ -74,8 +76,17 @@ def crawler_hahow_article(category: str, **kwargs):
         else:
             print(f"Fetch {url} failed.")
         
-        time.sleep(1)
+        time.sleep(0.1)
 
     df = pd.DataFrame(article_list)
-    df.to_csv(f"output/hahow_article_{category}.csv", index=False, encoding='utf-8-sig')
-    print(f"hahow_article_{category}.csv saved.")
+    df['uploaded_at'] = datetime.now(timezone.utc)  # 新增 uploaded_at 欄位，設為現在時間
+    # 不能使用 replace 模式上傳，不同 category 的資料會被覆蓋
+    # upload_data_to_mysql(table_name="hahow_article", df=df, mode="replace")
+    df = df.replace({pd.NaT: None, np.nan: None})
+    data = df.to_dict(orient='records') # 將 DataFrame 轉換為字典列表
+    upload_data_to_mysql_upsert(table_obj=article_table, data=data)
+    print(f"hahow_article_{category} has been uploaded to mysql.")
+
+
+if __name__ == "__main__":
+    crawler_hahow_article("programming")

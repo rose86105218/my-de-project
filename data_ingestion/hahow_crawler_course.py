@@ -1,14 +1,10 @@
+import requests
 import math
 import time
-
 import pandas as pd
-import requests
-
-from data_ingestion.worker import app
 
 
-@app.task()
-def crawler_hahow_course(category: str, **kwargs):
+def crawler_hahow_course(category: str):
 
     # 取得總頁數
     url = f'https://api.hahow.in/api/products/search?category=COURSE&groups={category}'
@@ -27,7 +23,7 @@ def crawler_hahow_course(category: str, **kwargs):
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36"
         }
         response = requests.get(url, headers=headers)
-        print(f"course, category: {category}, page:{p}, status_code:{response.status_code}")
+        print(f"category: {category}, page:{p}, status_code:{response.status_code}")
         if response.status_code == 200:
             courses = response.json()['data']['courseData']['products']
             for course in courses:
@@ -69,14 +65,18 @@ def crawler_hahow_course(category: str, **kwargs):
                     "publish_time": publish_time,
                     "video_length": video_length,
                 }
-                # print(course_dict)
+                print(course_dict)
                 course_list.append(course_dict) # 每次新增單筆課程資料
 
         else:
             print(f"Fetch {url} failed.")
 
-        time.sleep(1)
+        time.sleep(0.1)
 
     df = pd.DataFrame(course_list)
     df.to_csv(f"output/hahow_course_{category}.csv", index=False, encoding='utf-8-sig')
     print(f"hahow_course_{category}.csv saved.")
+
+
+if __name__ == "__main__":
+    crawler_hahow_course("programming")
