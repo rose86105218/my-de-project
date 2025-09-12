@@ -12,13 +12,6 @@ from airflow.operators.dummy_operator import DummyOperator
 from data_ingestion.get_danmu_tosql import get_danmu, video_list
 
 
-# 定義要爬取的分類
-CATEGORIES = [
-    "programming", "marketing", "language", "design",
-    "lifestyle", "music", "art", "photography", 'humanities',
-    "finance-and-investment", "career-skills", "cooking",
-]
-
 # 預設參數
 default_args = {
     'owner': 'data-team',
@@ -49,26 +42,26 @@ with DAG(
 
 
     # 產生1~5季分流 (把task_id存在字典) season_branch = {1: season_branch_1, 2: season_branch_2, ...}
-    season_branches = {}
+    season_branch = {}
     for i in range(1, 6):
         season_branch[i] = DummyOperator(
-            task_id=season_branch_{i},
+            task_id=f'season_branch_{i}',
         )
 
 
-    # 還沒弄好 做成字典，task要每季一個list
+    # 每一集都是一個任務，並根據season放到不同的branch
     # get_danmu_task = {1:[task1, task2, ...], 2: [taskn, taskm, ...]}
-    # 文章爬取任務 - 為每個分類創建單獨的任務
     get_danmu_tasks = {}
     for i in range(1, 6):
         get_danmu_tasks[i] = []
-        for video in video_list[video_list["season"]==i]:
-            task = PythonOperator(
-                task_id=f'get_danmu_{video["episode"]}',
-                python_callable=get_danmu,
-                op_args=[video["episode"]],
-            )
-            get_danmu_tasks[i].append(task)
+        for video in video_list:
+            if video["season"] == i:
+                task = PythonOperator(
+                    task_id=f'get_danmu_{video["episode"]}',
+                    python_callable=get_danmu,
+                    op_args=[video],
+                )
+                get_danmu_tasks[i].append(task)
 
     # 結束任務
     end_task = BashOperator(
@@ -78,6 +71,7 @@ with DAG(
     )
 
     # 設定任務依賴關係
-    # 開始 -> 環境驗證 -> 兩個分流 -> 各自的爬取任務 -> 結束
+    # 開始 ->  依season分流 -> 爬取每一集的彈幕 -> 結束
     for i in range(1, 6):
-        start_task >> season_branch[i] >> get_danmu_tasks[i] >> end_task
+        for task in get_danmu_tasks[i]:
+            start_task >> season_branch[i] >> task >> end_task

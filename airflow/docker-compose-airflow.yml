@@ -23,7 +23,7 @@ x-airflow-common: &airflow-common
     # 將 docker.sock 掛載到容器中，讓 Airflow 可以執行 docker 命令
     - /var/run/docker.sock:/var/run/docker.sock
   networks:
-    - my_network  # 加入 MySQL 的網路
+    - my_network_danmu  # 加入 MySQL 的網路
   command: >
     bash -c "pip install 'SQLAlchemy<2.0' 'alembic<2.0' &&
              exec airflow"
@@ -39,7 +39,7 @@ services:
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
     networks:
-      - my_network
+      - my_network_danmu
 
   airflow-init:
     <<: *airflow-common
@@ -80,5 +80,5 @@ volumes:
   postgres-db-volume:
 
 networks:
-  my_network:
+  my_network_danmu:
     external: true  # 使用已存在的外部網路
